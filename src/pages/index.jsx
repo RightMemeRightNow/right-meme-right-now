@@ -1,3 +1,5 @@
+import Container from "@/componets/Container";
+
 export default function Home() {
-  return <>right meme right now</>;
+  return <Container>right meme right now</Container>;
 }
