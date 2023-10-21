@@ -1,5 +1,9 @@
-import Container from "@/componets/Container";
+import Layout from "@/componets/Layout";
 
 export default function Home() {
-  return <Container>right meme right now</Container>;
+  return (
+    <Layout>
+      hi
+    </Layout>
+  );
 }

@@ -1,9 +1,7 @@
-const { styled } = require("styled-components")
+import styled from "styled-components";
 
-export const StyledContainer = styled.div`
-  background: red;
+export const StyledContainer = styled.main`
+  height: 100%;
+  width: 100%;
   max-width: 1080px;
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
 `;
