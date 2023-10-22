@@ -1,11 +1,15 @@
 import Logo from '../Logo';
+import * as S from './Header.style';
 
-const Header = () => {
+const Header = ({ step }) => {
+  let time = 7 - step;
+
   return (
     <>
       <Logo />
-      {/*TODOS Progressbar component 구현*/}
-      <div style={{ width: '100%', background: '#e2e2e2' }}>progressbar 진행중</div>
+      <S.ProgressBar>
+        <S.Progress width={100 - (time * 100) / 7} />
+      </S.ProgressBar>
     </>
   );
 };
