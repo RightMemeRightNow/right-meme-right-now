@@ -3,9 +3,11 @@ import Layout from "@/componets/Layout";
 import { Step } from "@/constants";
 import { useState } from "react";
 import Main from "@/componets/Main";
+import Finish from "@/componets/Finish";
 
 const MemeContainer = () => {
   const [step, setStep] = useState(Step.START);
+  const [selectedTags] = useState([]);
   const increaseStep = () => {
     setStep(prev => prev + 1);
   }
@@ -17,7 +19,7 @@ const MemeContainer = () => {
       {step === Step.BUSYNESS && (<Layout headerSide={<Header />}>BUSYNESS</Layout>)}
       {step === Step.EMOTION && (<Layout headerSide={<Header />}>EMOTION</Layout>)}
       {step === Step.ASSET && (<Layout headerSide={<Header />}>ASSET</Layout>)}
-      {step === Step.FINISH && (<Layout>FINISH</Layout>)}
+      {step === Step.FINISH && (<Layout headerSide={<Header />}><Finish selectedTags={selectedTags} setStep={setStep} /></Layout>)}
     </>
   );
 }
