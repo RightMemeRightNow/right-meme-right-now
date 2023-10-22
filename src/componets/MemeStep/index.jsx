@@ -28,10 +28,8 @@ const MemeStep = ({ question, options, increaseStep, prevStep, getAnswers }) => 
         {options.map((option, index) => (
           <Button
             onClick={() => handleAnswer(option)}
-            style={{
-              marginBottom: isOptionsOverTwo ? '1rem' : '2rem',
-              gridColumn: options.length === 9 && index === 8 ? `span 2` : `span 1`,
-            }}
+            marginBottom={isOptionsOverTwo ? '1rem' : '2rem'}
+            gridColumn={options.length === 9 && index === 8 ? `span 2` : `span 1`}
             key={index}
             theme={selectedButton === option ? 'primary' : ''}
           >
@@ -39,7 +37,7 @@ const MemeStep = ({ question, options, increaseStep, prevStep, getAnswers }) => 
           </Button>
         ))}
         <S.StyledLayout $isLastQuestion={isLastQuestion}>
-          <Button onClick={prevStep} style={{ marginRight: '1rem' }}>
+          <Button onClick={prevStep} marginRight="1rem">
             이전
           </Button>
           <Button onClick={() => handleNext(selectedButton)}>다음</Button>

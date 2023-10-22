@@ -3,6 +3,9 @@ import styled, { css } from "styled-components";
 export const StyledButton = styled.button`
   width: ${props => props.$width};
   padding: ${props => props.$padding};
+  margin-bottom: ${props => props.$marginBottom};
+  grid-column: ${props => props.$gridColumn};
+  margin-right: ${props => props.$marginRight};
   font-weight: 400;
   font-size: 1.25rem;
   ${({ $theme }) => css`
@@ -12,6 +15,5 @@ export const StyledButton = styled.button`
     color: ${$theme === 'primary' ? '#fff' : '#212121'};
     font-weight: ${$theme === 'primary' ? 500 : 400};
     border-radius: ${$theme === 'primary' ? '1.75rem' : $theme === 'secondary' ? '1.5rem' : 'none'};
-    
   `}
 `;

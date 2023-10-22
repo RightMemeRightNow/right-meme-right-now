@@ -5,11 +5,21 @@ const Button = ({
   width = '100%',
   padding = '1rem',
   theme = 'primary',
+  marginBottom = '',
+  gridColumn = '',
+  marginRight = '',
   onClick,
-  ...rest
 }) => {
   return (
-    <S.StyledButton $width={width} $padding={padding} $theme={theme} onClick={onClick} {...rest}>
+    <S.StyledButton
+      $marginBottom={marginBottom}
+      $gridColumn={gridColumn}
+      $marginRight={marginRight}
+      $width={width}
+      $padding={padding}
+      $theme={theme}
+      onClick={onClick}
+    >
       {children}
     </S.StyledButton>
   );
