@@ -11,8 +11,8 @@ const Main = ({ increaseStep }) => {
         <S.Wrapper>
           <Image src={'/images/question.png'} width={300} height={44} alt={'지금 내게 필요한 짤은?'} />
           <Logo width={400} height={150} />
+          <S.AdmirationImage src={'/images/admiration.png'} width={400} height={200} alt={'지금 내게 필요한 짤은?'} />
         </S.Wrapper>
-        <S.AdmirationImage src={'/images/admiration.png'} width={400} height={200} alt={'지금 내게 필요한 짤은?'} />
         <Button onClick={increaseStep}>
           짤 찾기
         </Button>
