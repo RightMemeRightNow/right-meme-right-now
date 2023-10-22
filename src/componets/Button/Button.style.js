@@ -2,9 +2,13 @@ import styled, { css } from "styled-components";
 
 export const StyledButton = styled.button`
   width: ${props => props.$width};
+  height: ${props => props.$height};
   padding: ${props => props.$padding};
   font-weight: 400;
   font-size: 1.25rem;
+  @media (max-width: 560px) {
+    font-size: 1rem;
+  }
   ${({ $theme }) => css`
     background: ${$theme === 'primary' ? '#212121' : $theme === 'secondary' ? '#E2E2E2' :
       'url("/images/button-border.png") no-repeat center center / 100% 100%'

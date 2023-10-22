@@ -17,5 +17,5 @@ export const Wrapper = styled.div`
 `;
 
 export const AdmirationImage = styled(Image)`
-  transform: translateY(-4rem);
+
 `;
