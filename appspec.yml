@@ -8,6 +8,10 @@ hooks:
     - location: scripts/stop_app.sh
       timeout: 120
       runas: root
+  ApplicationAfterInstall:
+    - location: scripts/npm_install.sh
+      timeout: 300
+      runas: root
   ApplicationStart:
     - location: scripts/start_app.sh
       timeout: 120
