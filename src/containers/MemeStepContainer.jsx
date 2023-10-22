@@ -5,10 +5,13 @@ import { useState } from "react";
 import Main from "@/componets/Main";
 import Portal from "@/componets/Portal";
 import Loading from "@/componets/Loading";
+import Finish from "@/componets/Finish";
 
 const MemeContainer = () => {
   const [step, setStep] = useState(Step.START);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedTags] = useState([]);
+
   const increaseStep = () => {
     setStep(prev => prev + 1);
   }
@@ -28,7 +31,7 @@ const MemeContainer = () => {
       {step === Step.BUSYNESS && (<Layout headerSide={<Header />}>BUSYNESS</Layout>)}
       {step === Step.EMOTION && (<Layout headerSide={<Header />}>EMOTION</Layout>)}
       {step === Step.ASSET && (<Layout headerSide={<Header />}>ASSET</Layout>)}
-      {step === Step.FINISH && (<Layout>FINISH</Layout>)}
+      {step === Step.FINISH && (<Layout headerSide={<Header />}><Finish selectedTags={selectedTags} setStep={setStep} /></Layout>)}
       <Portal isOpen={isModalOpen}><Loading /></Portal>
     </>
   );
