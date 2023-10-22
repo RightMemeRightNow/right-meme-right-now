@@ -15,6 +15,15 @@ const MemeContainer = () => {
     setQuestion(Questions.filter(question => question.step === step + 1)[0]);
   };
 
+  const prevStep = () => {
+    setStep(prev => prev - 1);
+    setQuestion(Questions.filter(question => question.step === step - 1)[0]);
+
+    const newAnswers = [...answers];
+    newAnswers.pop();
+    setAnswers(newAnswers);
+  };
+
   const getAnswers = answer => {
     setAnswers([...answers, answer]);
   };
@@ -22,57 +31,18 @@ const MemeContainer = () => {
   return (
     <>
       {step === Step.START && <Main increaseStep={increaseStep} />}
-      {step === Step.JOB && (
-        <Layout headerSide={<Header />}>
-          <MemeStep
-            question={question.question}
-            options={question.options}
-            increaseStep={increaseStep}
-            getAnswers={getAnswers}
-          />
-        </Layout>
-      )}
-      {step === Step.BEHAVIOR && (
-        <Layout headerSide={<Header />}>
-          <MemeStep
-            question={question.question}
-            options={question.options}
-            increaseStep={increaseStep}
-            getAnswers={getAnswers}
-          />
-        </Layout>
-      )}
-      {step === Step.BUSYNESS && (
-        <Layout headerSide={<Header />}>
-          <MemeStep
-            question={question.question}
-            options={question.options}
-            increaseStep={increaseStep}
-            getAnswers={getAnswers}
-          />
-        </Layout>
-      )}
-      {step === Step.EMOTION && (
-        <Layout headerSide={<Header />}>
-          <MemeStep
-            question={question.question}
-            options={question.options}
-            increaseStep={increaseStep}
-            getAnswers={getAnswers}
-          />
-        </Layout>
-      )}
-      {step === Step.ASSET && (
-        <Layout headerSide={<Header />}>
-          <MemeStep
-            question={question.question}
-            options={question.options}
-            increaseStep={increaseStep}
-            getAnswers={getAnswers}
-          />
-        </Layout>
-      )}
       {step === Step.FINISH && <Layout>FINISH</Layout>}
+      {step !== Step.START && (
+        <Layout headerSide={<Header />}>
+          <MemeStep
+            question={question.question}
+            options={question.options}
+            increaseStep={increaseStep}
+            getAnswers={getAnswers}
+            prevStep={prevStep}
+          />
+        </Layout>
+      )}
     </>
   );
 };

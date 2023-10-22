@@ -2,7 +2,7 @@ import { useState } from 'react';
 import * as S from './MemeStep.style';
 import Button from '@/componets/Button';
 
-const MemeStep = ({ question, options, increaseStep, getAnswers }) => {
+const MemeStep = ({ question, options, increaseStep, prevStep, getAnswers }) => {
   const [selectedButton, setSelectedButton] = useState(null);
   const isOptionsOverTwo = options.length > 2;
   const isLastQuestion = options.length === 9;
@@ -30,7 +30,9 @@ const MemeStep = ({ question, options, increaseStep, getAnswers }) => {
           </Button>
         ))}
         <S.StyledLayout $isLastQuestion={isLastQuestion}>
-          <Button style={{ marginRight: '1rem' }}>이전</Button>
+          <Button onClick={prevStep} style={{ marginRight: '1rem' }}>
+            이전
+          </Button>
           <Button onClick={increaseStep}>다음</Button>
         </S.StyledLayout>
       </S.Wrapper>
