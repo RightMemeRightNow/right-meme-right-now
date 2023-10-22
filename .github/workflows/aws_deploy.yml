@@ -25,9 +25,4 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }}
 
       - name: Run Code Deploy
-        run: aws deploy create-deployment \
-          --application-name $CODEDEPLOY_NAME \
-          --deployment-config-name CodeDeployDefault.AllAtOnce \
-          --deployment-group-name $CODEDEPLOY_GROUP \
-          --description "Deploying from GitHub Actions" \
-          --github-location repository=rmrn,commitId=${{ github.sha }}
+        run: aws deploy create-deployment --application-name $CODEDEPLOY_NAME --deployment-config-name CodeDeployDefault.AllAtOnce --deployment-group-name $CODEDEPLOY_GROUP --description "Deploying from GitHub Actions" --github-location repository=${{github.repository}},commitId=${{ github.sha }}
