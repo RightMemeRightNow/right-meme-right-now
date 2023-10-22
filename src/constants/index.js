@@ -3,9 +3,10 @@ export const Step = Object.freeze({
   JOB: 1,
   BEHAVIOR: 2,
   BUSYNESS: 3,
-  EMOTION: 4,
-  ASSET: 5,
-  FINISH: 6,
+  CURRENT: 4,
+  EMOTION: 5,
+  ASSET: 6,
+  FINISH: 7,
 });
 
 export const Questions = Object.freeze([

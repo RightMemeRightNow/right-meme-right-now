@@ -31,8 +31,7 @@ const MemeContainer = () => {
   return (
     <>
       {step === Step.START && <Main increaseStep={increaseStep} />}
-      {step === Step.FINISH && <Layout>FINISH</Layout>}
-      {step !== Step.START && (
+      {step !== Step.START && step !== Step.FINISH && (
         <Layout headerSide={<Header />}>
           <MemeStep
             question={question.question}
@@ -43,6 +42,7 @@ const MemeContainer = () => {
           />
         </Layout>
       )}
+      {step === Step.FINISH && <Layout>FINISH</Layout>}
     </>
   );
 };
