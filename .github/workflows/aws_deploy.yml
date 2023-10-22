@@ -10,7 +10,7 @@ env:
   CODEDEPLOY_GROUP: web-server-dg
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-22.04
 
     steps:
