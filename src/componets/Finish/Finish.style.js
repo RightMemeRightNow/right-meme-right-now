@@ -29,7 +29,8 @@ export const RowWrapper = styled.div`
 
 export const TagWrapper = styled.div`
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row;
+  flex-wrap: wrap;
   align-items: center;
   gap: 0.5rem;
   width: 100%;

@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { Meta } from '@/constants';
 
-const Finish = ({ selectedTags, setStep }) => {
+const Finish = ({ answers, setAnswers, setStep }) => {
   const [imageUrl, setImageUrl] = useState();
 
   const router = useRouter();
@@ -30,10 +30,12 @@ const Finish = ({ selectedTags, setStep }) => {
 
   const onClickRetry = () => {
     setStep(0);
+    setAnswers([]);
   };
 
   const onClickFindSimilar = () => {
     //todo
+    
   };
 
   return (
@@ -49,22 +51,16 @@ const Finish = ({ selectedTags, setStep }) => {
         <Image src={imageUrl} layout="responsive" width={400} height={300} alt={'결과이미지'} />
 
         <S.TagWrapper>
-          {selectedTags.map(() => {
-            //todo
-          })}
-          <S.Tag>태그1</S.Tag>
-          <S.Tag>태그2</S.Tag>
-          <S.Tag>태그3</S.Tag>
-          <S.Tag>태그4</S.Tag>
-          <S.Tag>태그5</S.Tag>
-          <S.Tag>태그6</S.Tag>
+          {answers.map((tag, i) => (
+            <S.Tag key={i}>{tag}</S.Tag>
+          ))}
         </S.TagWrapper>
       </S.Wrapper>
       <S.Wrapper>
         <S.RowWrapper>
           <a href={imageUrl} download style={{ width: '40%' }}>
             <Button padding="0" height="40px" theme="secondary" width="100%">
-              <Image src={'/images/download_icon.png'} width={30} height={30} />
+              <Image src={'/images/download_icon.png'} width={30} height={30} alt={'다운로드 버튼'}/>
             </Button>
           </a>
           <Button
