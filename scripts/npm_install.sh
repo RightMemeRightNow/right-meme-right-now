@@ -1,6 +1,4 @@
 #!/bin/bash
 
-echo "update dependencies test"
-echo "current dir: $(pwd)"
-
+cd /home/ubuntu/rmrn
 npm install
