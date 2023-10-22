@@ -6,8 +6,8 @@ export const QuestionTitle = styled.div`
 `
 export const Wrapper = styled.div`
  width: 100%;
- padding: ${({ $isOptionsOverTwo }) => $isOptionsOverTwo ? '3rem' : '10rem'} 0;
-
+ padding: ${({ $isOptionsOverTwo }) => $isOptionsOverTwo ? '3rem 0' : '10rem 0'} 0;
+ 
  ${({ $isLastQuestion }) => $isLastQuestion && `
  padding: 0rem;
  display: grid;
