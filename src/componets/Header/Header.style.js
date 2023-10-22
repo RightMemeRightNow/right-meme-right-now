@@ -9,7 +9,7 @@ export const ProgressBar = styled.div`
 `;
 
 export const Progress = styled.div`
-    width: ${(props) => props.width}%; 
+    width: ${(props) => `${props.width}%`}; 
     height: 1rem;
     background-color: black;
 `;

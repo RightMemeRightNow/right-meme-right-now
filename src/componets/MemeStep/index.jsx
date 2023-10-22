@@ -27,11 +27,11 @@ const MemeStep = ({ question, options, increaseStep, prevStep, getAnswers }) => 
       <S.Wrapper $isOptionsOverTwo={isOptionsOverTwo} $isLastQuestion={isLastQuestion}>
         {options.map((option, index) => (
           <Button
-            onClick={() => handleAnswer(option)}
+            onClick={() => handleAnswer(index)}
             marginBottom={isOptionsOverTwo ? '1rem' : '2rem'}
             gridColumn={options.length === 9 && index === 8 ? `span 2` : `span 1`}
             key={index}
-            theme={selectedButton === option ? 'primary' : ''}
+            theme={selectedButton === index ? 'primary' : ''}
           >
             {option}
           </Button>

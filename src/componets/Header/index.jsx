@@ -8,7 +8,7 @@ const Header = ({ step }) => {
     <>
       <Logo />
       <S.ProgressBar>
-        <S.Progress width={100 - (time * 100) / 7} />
+        <S.Progress width={String(100 - (time * 100) / 7)} />
       </S.ProgressBar>
     </>
   );
