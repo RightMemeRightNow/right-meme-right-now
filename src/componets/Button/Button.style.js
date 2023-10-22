@@ -12,5 +12,6 @@ export const StyledButton = styled.button`
     color: ${$theme === 'primary' ? '#fff' : '#212121'};
     font-weight: ${$theme === 'primary' ? 500 : 400};
     border-radius: ${$theme === 'primary' ? '1.75rem' : $theme === 'secondary' ? '1.5rem' : 'none'};
+    
   `}
 `;
