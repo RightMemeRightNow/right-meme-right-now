@@ -1,13 +1,17 @@
 import * as S from './Layout.style';
-import Container from "../Container";
 
-const Layout = ({ children }) => {
+const Layout = ({ headerSide, children }) => {
   return (
-    <S.StyledLayout>
-      <Container>
-        {children}
-      </Container>
-    </S.StyledLayout>
+    <S.Wrapper>
+      <S.StyledLayout>
+        <S.Header>
+          {headerSide}
+        </S.Header>
+        <S.Main>
+          {children}
+        </S.Main>
+      </S.StyledLayout>
+    </S.Wrapper>
   )
 }
 
