@@ -2,16 +2,29 @@ import * as S from './Finish.style';
 import Image from 'next/image';
 import Button from '@/componets/Button';
 import { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
+import { Meta } from '@/constants';
 
 const Finish = ({ selectedTags, setStep }) => {
   const [imageUrl, setImageUrl] = useState();
+
+  const router = useRouter();
 
   useEffect(() => {
     getFinalImage().then(res => setImageUrl(res.image));
   }, []);
 
+  const shareClickHandler = () => {
+    if (typeof window === 'undefined') return;
+
+    const currentUrl = Meta.url + router.asPath;
+
+    navigator.clipboard.writeText(currentUrl);
+
+    alert('클립 보드에 주소가 복사되었습니다');
+  };
+
   const onClickNotGood = () => {
-    // eslint-disable-next-line no-undef
     alert('준비중');
   };
 
@@ -20,10 +33,6 @@ const Finish = ({ selectedTags, setStep }) => {
   };
 
   const onClickFindSimilar = () => {
-    //todo
-  };
-
-  const onClickCopyUrl = () => {
     //todo
   };
 
@@ -60,7 +69,7 @@ const Finish = ({ selectedTags, setStep }) => {
           </Button>
         </S.RowWrapper>
         <S.RowWrapper>
-          <Button onClick={onClickCopyUrl}>공유하기</Button>
+          <Button onClick={shareClickHandler}>공유하기</Button>
           <Button theme="secondary" onClick={onClickRetry}>
             다시 해보기
           </Button>
