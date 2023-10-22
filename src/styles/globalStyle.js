@@ -19,6 +19,12 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
   }
 
+  button {
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+  }
+
   * {
     font-family: pretendard, 'Ubuntu', sans-serif;
     box-sizing: border-box;
