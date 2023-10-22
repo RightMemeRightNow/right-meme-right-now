@@ -6,13 +6,25 @@ const Button = ({
   height = 'auto',
   padding = '1rem',
   theme = 'primary',
+  marginBottom = '',
+  gridColumn = '',
+  marginRight = '',
   onClick,
 }) => {
   return (
-    <S.StyledButton $width={width} $height={height} $padding={padding} $theme={theme} onClick={onClick}>
+    <S.StyledButton
+      $height={height}
+      $marginBottom={marginBottom}
+      $gridColumn={gridColumn}
+      $marginRight={marginRight}
+      $width={width}
+      $padding={padding}
+      $theme={theme}
+      onClick={onClick}
+    >
       {children}
     </S.StyledButton>
-  )
-}
+  );
+};
 
 export default Button;

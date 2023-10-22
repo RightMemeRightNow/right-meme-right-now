@@ -4,6 +4,9 @@ export const StyledButton = styled.button`
   width: ${props => props.$width};
   height: ${props => props.$height};
   padding: ${props => props.$padding};
+  margin-bottom: ${props => props.$marginBottom};
+  grid-column: ${props => props.$gridColumn};
+  margin-right: ${props => props.$marginRight};
   font-weight: 400;
   font-size: 1.25rem;
   @media (max-width: 560px) {
