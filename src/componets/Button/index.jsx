@@ -6,10 +6,9 @@ const Button = ({
   padding = '1rem',
   theme = 'primary',
   onClick,
-  ...restProps
 }) => {
   return (
-    <S.StyledButton $width={width} $padding={padding} $theme={theme} onClick={onClick} {...restProps}>
+    <S.StyledButton $width={width} $padding={padding} $theme={theme} onClick={onClick}>
       {children}
     </S.StyledButton>
   )
