@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Image from "next/image";
 
 export const FlexWrapper = styled.div`
   display: flex;
@@ -26,10 +25,6 @@ export const RowWrapper = styled.div`
   gap: 0.5rem;
   width: 90%;
 
-`;
-
-export const AdmirationImage = styled(Image)`
-  transform: translateY(-4rem);
 `;
 
 export const TagWrapper = styled.div`
