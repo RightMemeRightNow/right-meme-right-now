@@ -12,6 +12,11 @@ const TAGS = [
 export default async function getFinalImage(req, res) {
   let { query } = req;
 
+  if (!validateQuery(query)) {
+    res.status(400).json({ error: "Bad Request" });
+    return;
+  }
+
   try {
     let client = await getMongoClient();
     let db = client.db(process.env.MONGODB_DB);
@@ -38,4 +43,29 @@ function getTags(query) {
   return TAGS.map((item, index) => {
     return item[idx[index]];
   });
+}
+
+function validateQuery(query) {
+  if (query.tags === undefined) {
+    return false;
+  }
+
+  if (query.tags.length !== 6) {
+    return false;
+  }
+
+  let tags = query.tags.split("");
+  let isValid = true;
+
+  tags.forEach((item, idx) => {
+    let tag = parseInt(item);
+    if (isNaN(tag)) {
+      isValid = false;
+    }
+    if (tag >= TAGS[idx].length) {
+      isValid = false;
+    }
+  });
+
+  return isValid;
 }
