@@ -12,6 +12,15 @@ const MemeStep = ({ question, options, increaseStep, prevStep, getAnswers }) => 
     setSelectedButton(answer);
   };
 
+  const handleNext = answer => {
+    if (answer === null) {
+      alert('답변을 골라주세요');
+    } else {
+      increaseStep();
+      setSelectedButton(null);
+    }
+  };
+
   return (
     <>
       <S.QuestionTitle>{question}</S.QuestionTitle>
@@ -33,7 +42,7 @@ const MemeStep = ({ question, options, increaseStep, prevStep, getAnswers }) => 
           <Button onClick={prevStep} style={{ marginRight: '1rem' }}>
             이전
           </Button>
-          <Button onClick={increaseStep}>다음</Button>
+          <Button onClick={() => handleNext(selectedButton)}>다음</Button>
         </S.StyledLayout>
       </S.Wrapper>
     </>
