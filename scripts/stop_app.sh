@@ -1,6 +1,5 @@
 #!/bin/bash
 
-echo "stop app test"
 port_to_stop=3000
 
 pid=$(lsof -ti :$port_to_stop)
