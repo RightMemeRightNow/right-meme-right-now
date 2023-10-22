@@ -24,14 +24,13 @@ export const RowWrapper = styled.div`
   justify-content: center;
   gap: 0.5rem;
   width: 90%;
-
 `;
 
 export const TagWrapper = styled.div`
   display: flex;
   flex-flow: row;
   flex-wrap: wrap;
-  align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   width: 100%;
 `;

@@ -11,25 +11,22 @@ import Finish from '@/componets/Finish';
 const MemeContainer = () => {
   const [step, setStep] = useState(Step.START);
   const [question, setQuestion] = useState();
-  const [answers, setAnswers] = useState([]);
+  const [answers, setAnswers] = useState('');
   const [isModalOpen] = useState(false);
 
   const increaseStep = () => {
     setStep(prev => prev + 1);
-    setQuestion(Questions.filter(question => question.step === step + 1)[0]);
+    setQuestion(Questions.find(question => question.step === step + 1));
   };
 
   const prevStep = () => {
     setStep(prev => prev - 1);
-    setQuestion(Questions.filter(question => question.step === step - 1)[0]);
-
-    const newAnswers = [...answers];
-    newAnswers.pop();
-    setAnswers(newAnswers);
+    setQuestion(Questions.find(question => question.step === step - 1));
+    setAnswers(answers.substring(0, answers.length - 1));
   };
 
   const getAnswers = answer => {
-    setAnswers([...answers, answer]);
+    setAnswers(prev => prev + answer);
   };
 
   return (

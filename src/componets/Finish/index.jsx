@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Button from '@/componets/Button';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-import { Meta } from '@/constants';
+import { Meta, Questions } from '@/constants';
 
 const Finish = ({ answers, setAnswers, setStep }) => {
   const [imageUrl, setImageUrl] = useState();
@@ -35,7 +35,7 @@ const Finish = ({ answers, setAnswers, setStep }) => {
 
   const onClickFindSimilar = () => {
     //todo
-    
+
   };
 
   return (
@@ -47,20 +47,18 @@ const Finish = ({ answers, setAnswers, setStep }) => {
           height={44}
           alt={'지금 내게 필요한 짤은?'}
         />
-
-        <Image src={imageUrl} layout="responsive" width={400} height={300} alt={'결과이미지'} />
-
+        {/*<Image src={imageUrl} layout="responsive" width={400} height={300} alt={'결과이미지'} />*/}
         <S.TagWrapper>
-          {answers.map((tag, i) => (
-            <S.Tag key={i}>{tag}</S.Tag>
+          {answers.split('').map((answer, i) => (
+            <S.Tag key={i}>{`#${Questions[i].tag[Number(answer)]}`}</S.Tag>
           ))}
         </S.TagWrapper>
       </S.Wrapper>
       <S.Wrapper>
         <S.RowWrapper>
-          <a href={imageUrl} download style={{ width: '40%' }}>
+          <a href={imageUrl} download style={{ width: "40%" }}>
             <Button padding="0" height="40px" theme="secondary" width="100%">
-              <Image src={'/images/download_icon.png'} width={30} height={30} alt={'다운로드 버튼'}/>
+              <Image src={'/images/download_icon.png'} width={30} height={30} alt={'다운로드 버튼'} />
             </Button>
           </a>
           <Button
