@@ -46,11 +46,7 @@ const MemeContainer = () => {
           />
         </Layout>
       )}
-      {step === Step.FINISH && (
-        <Layout headerSide={<Header />}>
-          <Finish selectedTags={answers} setStep={setStep} />
-        </Layout>
-      )}
+      {step === Step.FINISH && (<Layout headerSide={<Header />}><Finish answers={answers} setAnswers={setAnswers} setStep={setStep} /></Layout>)}
       <Portal isOpen={isModalOpen}>
         <Loading />
       </Portal>
