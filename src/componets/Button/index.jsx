@@ -2,7 +2,6 @@ import * as S from './Button.style';
 
 const Button = ({
   children,
-  height = 'auto',
   width = '100%',
   height = 'auto',
   padding = '1rem',
