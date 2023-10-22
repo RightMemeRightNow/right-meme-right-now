@@ -50,9 +50,11 @@ const Finish = ({ selectedTags, setStep }) => {
       </S.Wrapper>
       <S.Wrapper>
         <S.RowWrapper>
-          <Button theme="secondary" width="40%">
-            <Image src={'/images/download_icon.png'} width={25} height={25} />
-          </Button>
+          <a href={imageUrl} download style={{ width: '40%' }}>
+            <Button theme="secondary" width="100%">
+              <Image src={'/images/download_icon.png'} width={25} height={25} />
+            </Button>
+          </a>
           <Button theme="secondary" width="60%" onClick={onClickFindSimilar}>
             비슷한 짤 찾기
           </Button>
