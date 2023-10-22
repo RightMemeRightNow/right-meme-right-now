@@ -5,5 +5,6 @@ export const StyledLayout = styled.div`
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
+  padding: 4rem 0;
 `;
 

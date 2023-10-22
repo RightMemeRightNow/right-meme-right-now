@@ -7,14 +7,11 @@ const GlobalStyle = createGlobalStyle`
   }
   html,
   body {
-    background: red;
     padding: 0;
     margin: 0;
     font-family: pretendard, 'Ubuntu', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
         Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     font-size: 16px;
-    color: var(--natural-color); 
-    background: var(--background-color); 
   }
 
   a {

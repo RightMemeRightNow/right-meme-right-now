@@ -3,7 +3,7 @@ import Layout from "@/componets/Layout";
 export default function Home() {
   return (
     <Layout>
-      hi
+      right meme right now
     </Layout>
   );
 }
