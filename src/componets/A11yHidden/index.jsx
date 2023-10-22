@@ -2,10 +2,10 @@ import { forwardRef } from "react";
 import * as S from './A11yHidden.style';
 
 const A11yHidden = forwardRef(function A11yHidden(
-  { as: Component = 'span', children, ...restProps }, ref
+  { as: Component = 'span', children }, ref
 ) {
   return (
-    <Component style={S.A11yHidden} ref={ref} {...restProps}>
+    <Component style={S.A11yHidden} ref={ref}>
       {children}
     </Component>
   );
