@@ -51,39 +51,39 @@
     </tr>
     <tr height="150px">
         <td align="center" width="200px">
-                <a href="https://github.com/psymoneylink">
-                    <image src="/images/doc/koy.png" width="75" height="75" />
+                <a href="https://github.com/psymoney">
+                    <image src="./public/images/doc/koy.png" width="75" height="75" />
                 </a>
                 <br />
-                <a href="link">psymoney</a>
+                <a href="https://github.com/psymoney">psymoney</a>
         </td>
         <td align="center" width="200px">
-                <a href="https://github.com/minsoo0112link">
-                    <image src="/images/doc/leo.png" width="75" height="75" />
+                <a href="https://github.com/minsoo0112">
+                    <image src="./public/images/doc/leo.png" width="75" height="75" />
                 </a>
                 <br />
-                <a href="link">minsoo0112</a>
+                <a href="https://github.com/minsoo0112">minsoo0112</a>
         </td>
         <td align="center" width="200px">
-                <a href="https://github.com/seonghun0828link">
-                    <image src="/images/doc/jojo.png" width="75" height="75" />
+                <a href="https://github.com/seonghun0828">
+                    <image src="./public/images/doc/jojo.png" width="75" height="75" />
                 </a>
                 <br />
-                <a href="https://github.com/KJeeulink">seonghun0828</a>
+                <a href="https://github.com/seonghun0828">seonghun0828</a>
         </td>
         <td align="center" width="200px">
-                <a href="link">
-                    <image src="/images/doc/hodo.png" width="75" height="75" />
+                <a href="https://github.com/KJeeu">
+                    <image src="./public/images/doc/hodo.png" width="75" height="75" />
                 </a>
                 <br />
-                <a href="link">KJeeu</a>
+                <a href="https://github.com/KJeeu">KJeeu</a>
         </td>
         <td align="center" width="200px">
-                <a href="https://github.com/hyunwlee-devlink">
-                    <image src="/images/doc/dao.png" width="75" height="75" />
+                <a href="https://github.com/hyunwlee-dev">
+                    <image src="./public/images/doc/dao.png" width="75" height="75" />
                 </a>
                 <br />
-                <a href="link">hyunwlee-dev</a>
+                <a href="https://github.com/hyunwlee-dev">hyunwlee-dev</a>
         </td>
     </tr>
 </table>
