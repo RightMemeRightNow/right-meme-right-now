@@ -1,17 +1,34 @@
 # 이때이짤
 
 ---
+
 <p align="center"><image src="./public/images/doc/main.png"/></p>
-<p align="center"><a href="https://right-meme-right-now.site">[인생 짤 찾으러 가기]</a></p>
+<p align="center"><a href="https://right-meme-right-now.site">⬆︎ 인생 짤 찾으러 가기 ⬆︎</a></p>
 
 ## 프로젝트 요약
-지금 당신에게 필요한 바로 그 짤을 찾아드리는 "이때이짤" 입니다.
+
+지금 이 순간, 당신에게 필요한 바로 그 짤을 찾아드리는 "이때이짤" 입니다.
 
 프로젝트 기간: 2023.10.18. ~ 2023.10.23.
 
 ## 프로젝트 소개
 
+<img src="./public/images/doc/main-page.png" width="500px" />
+
+랜딩 페이지입니다. 지금 당신의 기분, 상황에 맞는 짤을 찾아보세요!
+
+<img src="./public/images/doc/step-page.png" width="500px" />
+
+당신이 지금 어떤지 알려주세요! 꼭 맞는 짤을 찾기 위해 솔직하게 대답해봐요!
+
+<img src="./public/images/doc/final-page.jpeg" width="500px" />
+
+이 짤이 마음에 드셨으면 좋겠어요. 다른 분들과 공유해볼까요?
+
+### 기술 스택
+
 ---
+
 ## 팀 소개
 
 <table>
@@ -24,39 +41,39 @@
     </tr>
     <tr height="150px">
         <td align="center" width="200px">
-                <a href="link">
-                    <image src="https://avatars.githubusercontent.com/u/00000000?v=4" width="75" height="75" />
+                <a href="https://github.com/psymoneylink">
+                    <image src="/images/doc/koy.png" width="75" height="75" />
                 </a>
                 <br />
-                <a href="link">이름</a>
+                <a href="link">psymoney</a>
+        </td>
+        <td align="center" width="200px">
+                <a href="https://github.com/minsoo0112link">
+                    <image src="/images/doc/leo.png" width="75" height="75" />
+                </a>
+                <br />
+                <a href="link">minsoo0112</a>
+        </td>
+        <td align="center" width="200px">
+                <a href="https://github.com/seonghun0828link">
+                    <image src="/images/doc/jojo.png" width="75" height="75" />
+                </a>
+                <br />
+                <a href="https://github.com/KJeeulink">seonghun0828</a>
         </td>
         <td align="center" width="200px">
                 <a href="link">
-                    <image src="https://avatars.githubusercontent.com/u/00000000?v=4" width="75" height="75" />
+                    <image src="/images/doc/hodo.png" width="75" height="75" />
                 </a>
                 <br />
-                <a href="link">이름</a>
+                <a href="link">KJeeu</a>
         </td>
         <td align="center" width="200px">
-                <a href="link">
-                    <image src="https://avatars.githubusercontent.com/u/00000000?v=4" width="75" height="75" />
+                <a href="https://github.com/hyunwlee-devlink">
+                    <image src="/images/doc/dao.png" width="75" height="75" />
                 </a>
                 <br />
-                <a href="link">이름</a>
-        </td>
-        <td align="center" width="200px">
-                <a href="link">
-                    <image src="https://avatars.githubusercontent.com/u/00000000?v=4" width="75" height="75" />
-                </a>
-                <br />
-                <a href="link">이름</a>
-        </td>
-        <td align="center" width="200px">
-                <a href="link">
-                    <image src="https://avatars.githubusercontent.com/u/00000000?v=4" width="75" height="75" />
-                </a>
-                <br />
-                <a href="link">이름</a>
+                <a href="link">hyunwlee-dev</a>
         </td>
     </tr>
 </table>
