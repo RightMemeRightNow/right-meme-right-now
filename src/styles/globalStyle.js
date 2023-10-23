@@ -1,10 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
-  @font-face {
-    font-family: pretendard;
-    src: url("/fonts/Pretendard-Black.woff") format("truetype");
-  }
   html,
   body {
     padding: 0;
