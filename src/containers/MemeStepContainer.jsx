@@ -7,12 +7,28 @@ import MemeStep from '@/componets/MemeStep';
 import Portal from '@/componets/Portal';
 import Loading from '@/componets/Loading';
 import Finish from '@/componets/Finish';
-
+import { HttpClient } from '@/httpClient';
+import { useZzalFetch } from '@/hooks/useZzalFetch';
+import { TestService } from '@/services/TestService';
+// import { ZzalService } from '@/services/ZzalService';
+// const httpClient = new HttpClient(Meta.url);
+const mockHttpClient = new HttpClient(`https://jsonplaceholder.typicode.com`);
+const testService = new TestService(mockHttpClient);
 const MemeContainer = () => {
   const [step, setStep] = useState(Step.START);
   const [question, setQuestion] = useState();
   const [answers, setAnswers] = useState('');
-  const [isModalOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  }
+  const closeModal = () => {
+    setIsModalOpen(false);
+  }
+  // TODOS: change to zzalService
+  // const { result, getImageList } = useZzalFetch(() => zzalService.getFinalImage(answers), openModal, closeModal);
+  const { result: testResult, getImageList: getTodos, error } = useZzalFetch(() => testService.getTodos(`1`), openModal, closeModal);
 
   const increaseStep = () => {
     setStep(prev => prev + 1);
@@ -29,6 +45,14 @@ const MemeContainer = () => {
     setAnswers(prev => prev + answer);
   };
 
+  const test = () => {
+    getTodos();
+  }
+
+  if (error) {
+    throw new Error('Error')
+  }
+
   return (
     <>
       {step === Step.START && <Main increaseStep={increaseStep} />}
@@ -43,7 +67,17 @@ const MemeContainer = () => {
           />
         </Layout>
       )}
-      {step === Step.FINISH && (<Layout headerSide={<Header />}><Finish answers={answers} setAnswers={setAnswers} setStep={setStep} /></Layout>)}
+      {step === Step.FINISH && (
+        <Layout headerSide={<Header />}>
+          <Finish
+            answers={answers}
+            setAnswers={setAnswers}
+            setStep={setStep}
+            fetchZzal={test}
+            fetchedResult={testResult}
+          />
+        </Layout>)
+      }
       <Portal isOpen={isModalOpen}>
         <Loading />
       </Portal>
