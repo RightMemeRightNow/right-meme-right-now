@@ -6,7 +6,6 @@ files:
     
 permissions:
   - object: /home/ubuntu/rmrn
-  - group: ubuntu
 
 hooks:
   ApplicationStop:
