@@ -6,6 +6,8 @@ files:
     
 permissions:
   - object: /home/ubuntu/rmrn
+  - group: ubuntu
+  - mode: 755
 
 hooks:
   ApplicationStop:
