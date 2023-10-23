@@ -3,16 +3,22 @@ os: linux
 files:
   - source: /
     destination: /home/ubuntu/rmrn
+    
+permissions:
+  - object: /home/ubuntu/rmrn
+  - owner: ubuntu
+  - group: ubuntu
+
 hooks:
   ApplicationStop:
     - location: scripts/stop_app.sh
       timeout: 300
-      runas: root
+      runas: ubuntu
   ApplicationAfterInstall:
     - location: scripts/npm_install.sh
       timeout: 300
-      runas: root
+      runas: ubuntu
   ApplicationStart:
     - location: scripts/start_app.sh
       timeout: 120
-      runas: root
+      runas: ubuntu
