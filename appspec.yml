@@ -6,7 +6,6 @@ files:
     
 permissions:
   - object: /home/ubuntu/rmrn
-  - owner: ubuntu
   - group: ubuntu
 
 hooks:
