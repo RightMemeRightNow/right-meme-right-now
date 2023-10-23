@@ -43,11 +43,11 @@
 
 <table>
     <tr height="50px">
-        <td align="center">ROLE</td>
-        <td align="center">ROLE</td>
-        <td align="center">ROLE</td>
-        <td align="center">ROLE</td>
-        <td align="center">ROLE</td>
+        <td align="center">백엔드</td>
+        <td align="center">프론트</td>
+        <td align="center">프론트</td>
+        <td align="center">프론트</td>
+        <td align="center">프론트</td>
     </tr>
     <tr height="150px">
         <td align="center" width="200px">
