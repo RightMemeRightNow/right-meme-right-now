@@ -1,6 +1,6 @@
 import Header from '@/componets/Header';
 import Layout from '@/componets/Layout';
-import { Step, Questions } from '@/constants';
+import { Step, Questions, Meta } from '@/constants';
 import { useState } from 'react';
 import Main from '@/componets/Main';
 import MemeStep from '@/componets/MemeStep';
@@ -9,11 +9,10 @@ import Loading from '@/componets/Loading';
 import Finish from '@/componets/Finish';
 import { HttpClient } from '@/httpClient';
 import { useZzalFetch } from '@/hooks/useZzalFetch';
-import { TestService } from '@/services/TestService';
-// import { ZzalService } from '@/services/ZzalService';
-// const httpClient = new HttpClient(Meta.url);
-const mockHttpClient = new HttpClient(`https://jsonplaceholder.typicode.com`);
-const testService = new TestService(mockHttpClient);
+import { ZzalService } from '@/services/ZzalService';
+const httpClient = new HttpClient(Meta.url);
+// const httpClient = new HttpClient(`http://localhost:3000`);
+const zzalService = new ZzalService(httpClient);
 const MemeContainer = () => {
   const [step, setStep] = useState(Step.START);
   const [question, setQuestion] = useState();
@@ -26,9 +25,7 @@ const MemeContainer = () => {
   const closeModal = () => {
     setIsModalOpen(false);
   }
-  // TODOS: change to zzalService
-  // const { result, getImageList } = useZzalFetch(() => zzalService.getFinalImage(answers), openModal, closeModal);
-  const { result: testResult, getImageList: getTodos, error } = useZzalFetch(() => testService.getTodos(`1`), openModal, closeModal);
+  const { result, getImageList, error } = useZzalFetch(() => zzalService.getFinalImage(answers), answers, openModal, closeModal);
 
   const increaseStep = () => {
     setStep(prev => prev + 1);
@@ -45,8 +42,8 @@ const MemeContainer = () => {
     setAnswers(prev => prev + answer);
   };
 
-  const test = () => {
-    getTodos();
+  const fetchZzal = () => {
+    getImageList();
   }
 
   if (error) {
@@ -73,8 +70,8 @@ const MemeContainer = () => {
             answers={answers}
             setAnswers={setAnswers}
             setStep={setStep}
-            fetchZzal={test}
-            fetchedResult={testResult}
+            fetchZzal={fetchZzal}
+            fetchedResult={result}
           />
         </Layout>)
       }

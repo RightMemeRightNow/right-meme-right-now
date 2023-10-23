@@ -22,7 +22,7 @@ const Finish = ({ answers, setAnswers, setStep, fetchedResult, fetchZzal }) => {
   };
 
   const onClickNotGood = () => {
-    alert('준비중');
+    alert('준비중입니다.');
   };
 
   const onClickRetry = () => {
@@ -31,7 +31,7 @@ const Finish = ({ answers, setAnswers, setStep, fetchedResult, fetchZzal }) => {
   };
 
   const onClickFindSimilar = () => {
-    //todo
+    alert('준비중입니다.');
   };
 
   return (
@@ -44,7 +44,7 @@ const Finish = ({ answers, setAnswers, setStep, fetchedResult, fetchZzal }) => {
             height={44}
             alt={'지금 내게 필요한 짤은?'}
           />
-          <Image src={`/images/zzal/${fetchedResult.id}.png`} layout="responsive" width={400} height={300} alt={'결과이미지'} />
+          <Image src={`/images/zzal/${fetchedResult.imageNames[0]}.png`} layout="responsive" width={400} height={300} alt={'결과이미지'} />
           <S.TagWrapper>
             {answers?.split('').map((answer, i) => (
               <S.Tag key={i}>{`#${Questions[i]?.tag[Number(answer)]}`}</S.Tag>

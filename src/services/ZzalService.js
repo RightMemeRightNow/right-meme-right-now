@@ -6,7 +6,7 @@ export class ZzalService {
 
   async getFinalImage(tags) {
     try {
-      const response = await this.httpClient.fetch(`/api/getFinalImage`).get(`?tags=${tags}`);
+      const response = await this.httpClient.fetch(`/api/getFinalImage`, {}).get(`?tags=${tags}`);
       return response;
     } catch (error) {
       throw error;
