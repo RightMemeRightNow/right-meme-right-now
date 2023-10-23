@@ -1,40 +1,89 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 이때이짤
 
-## Getting Started
+---
 
-First, run the development server:
+<p align="center"><image src="./public/images/doc/main.png"/></p>
+<p align="center"><a href="https://right-meme-right-now.site">⬆︎ 인생 짤 찾으러 가기 ⬆︎</a></p>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 프로젝트 요약
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+지금 이 순간, 당신에게 필요한 바로 그 짤을 찾아드리는 "이때이짤" 입니다.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+프로젝트 기간: 2023.10.18. ~ 2023.10.23.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## 프로젝트 소개
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+<img src="./public/images/doc/main-page.png" width="500px" />
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+랜딩 페이지입니다. 지금 당신의 기분, 상황에 맞는 짤을 찾아보세요!
 
-## Learn More
+<img src="./public/images/doc/step-page.png" width="500px" />
 
-To learn more about Next.js, take a look at the following resources:
+당신이 지금 어떤지 알려주세요! 꼭 맞는 짤을 찾기 위해 솔직하게 대답해봐요!
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<img src="./public/images/doc/final-page.jpeg" width="500px" />
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+이 짤이 마음에 드셨으면 좋겠어요. 다른 분들과 공유해볼까요?
 
-## Deploy on Vercel
+### :wrench: 기술 스택
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
+<img src="https://img.shields.io/badge/next-js-green?style=flat-square&logo=next.js&logoColor=white"/>
+<img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white"/>
+<img src="https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white"/>
+<br>
+<img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white"/>
+<img src="https://img.shields.io/badge/Amazon_AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white"/>
+<br>
+<img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white"/>
+
+## 팀 소개
+
+<table>
+    <tr height="50px">
+        <td align="center">백엔드</td>
+        <td align="center">프론트</td>
+        <td align="center">프론트</td>
+        <td align="center">프론트</td>
+        <td align="center">프론트</td>
+    </tr>
+    <tr height="150px">
+        <td align="center" width="200px">
+                <a href="https://github.com/psymoney">
+                    <image src="./public/images/doc/koy.png" width="75" height="75" />
+                </a>
+                <br />
+                <a href="https://github.com/psymoney">psymoney</a>
+        </td>
+        <td align="center" width="200px">
+                <a href="https://github.com/minsoo0112">
+                    <image src="./public/images/doc/leo.png" width="75" height="75" />
+                </a>
+                <br />
+                <a href="https://github.com/minsoo0112">minsoo0112</a>
+        </td>
+        <td align="center" width="200px">
+                <a href="https://github.com/seonghun0828">
+                    <image src="./public/images/doc/jojo.png" width="75" height="75" />
+                </a>
+                <br />
+                <a href="https://github.com/seonghun0828">seonghun0828</a>
+        </td>
+        <td align="center" width="200px">
+                <a href="https://github.com/KJeeu">
+                    <image src="./public/images/doc/hodo.png" width="75" height="75" />
+                </a>
+                <br />
+                <a href="https://github.com/KJeeu">KJeeu</a>
+        </td>
+        <td align="center" width="200px">
+                <a href="https://github.com/hyunwlee-dev">
+                    <image src="./public/images/doc/dao.png" width="75" height="75" />
+                </a>
+                <br />
+                <a href="https://github.com/hyunwlee-dev">hyunwlee-dev</a>
+        </td>
+    </tr>
+</table>
