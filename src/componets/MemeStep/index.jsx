@@ -1,11 +1,12 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import * as S from './MemeStep.style';
 import Button from '@/componets/Button';
 
-const MemeStep = ({ question, options, increaseStep, prevStep, getAnswers }) => {
+const MemeStep = ({ step, answers, question, options, increaseStep, prevStep, getAnswers }) => {
   const [selectedButton, setSelectedButton] = useState(null);
   const isOptionsOverTwo = options.length > 2;
   const isLastQuestion = options.length === 9;
+  const userAnswer = answers.length > 0 ? answers[step - 1] : null;
 
   const handleAnswer = answer => {
     setSelectedButton(answer);
@@ -15,11 +16,19 @@ const MemeStep = ({ question, options, increaseStep, prevStep, getAnswers }) => 
     if (selectedButton === null) {
       alert('답변을 골라주세요');
     } else {
-      getAnswers(selectedButton);
       increaseStep();
       setSelectedButton(null);
+      if (userAnswer !== selectedButton) {
+        getAnswers(answers.substring(0, step - 1) + selectedButton + answers.substring(step));
+      }
     }
   };
+
+  useEffect(() => {
+    if (userAnswer) {
+      setSelectedButton(Number(userAnswer));
+    }
+  }, [options]);
 
   return (
     <>
@@ -37,7 +46,7 @@ const MemeStep = ({ question, options, increaseStep, prevStep, getAnswers }) => 
           </Button>
         ))}
         <S.StyledLayout $isLastQuestion={isLastQuestion}>
-          <Button onClick={prevStep} marginRight="1rem">
+          <Button onClick={() => prevStep()} marginRight="1rem">
             이전
           </Button>
           <Button onClick={() => handleNext()}>다음</Button>

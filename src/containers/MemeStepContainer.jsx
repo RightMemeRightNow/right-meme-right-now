@@ -21,11 +21,16 @@ const MemeContainer = () => {
 
   const openModal = () => {
     setIsModalOpen(true);
-  }
+  };
   const closeModal = () => {
     setIsModalOpen(false);
-  }
-  const { result, getImageList, error } = useZzalFetch(() => zzalService.getFinalImage(answers), answers, openModal, closeModal);
+  };
+  const { result, getImageList, error } = useZzalFetch(
+    () => zzalService.getFinalImage(answers),
+    answers,
+    openModal,
+    closeModal,
+  );
 
   const increaseStep = () => {
     setStep(prev => prev + 1);
@@ -35,19 +40,18 @@ const MemeContainer = () => {
   const prevStep = () => {
     setStep(prev => prev - 1);
     setQuestion(Questions.find(question => question.step === step - 1));
-    setAnswers(answers.substring(0, answers.length - 1));
   };
 
   const getAnswers = answer => {
-    setAnswers(prev => prev + answer);
+    setAnswers(answer);
   };
 
   const fetchZzal = () => {
     getImageList();
-  }
+  };
 
   if (error) {
-    throw new Error('Error')
+    throw new Error('Error');
   }
 
   return (
@@ -56,6 +60,8 @@ const MemeContainer = () => {
       {step !== Step.START && step !== Step.FINISH && (
         <Layout headerSide={<Header step={step} />}>
           <MemeStep
+            step={step}
+            answers={answers}
             question={question.question}
             options={question.options}
             increaseStep={increaseStep}
@@ -73,8 +79,8 @@ const MemeContainer = () => {
             fetchZzal={fetchZzal}
             fetchedResult={result}
           />
-        </Layout>)
-      }
+        </Layout>
+      )}
       <Portal isOpen={isModalOpen}>
         <Loading />
       </Portal>
