@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const FlexWrapper = styled.div`
   display: flex;
@@ -36,12 +36,19 @@ export const TagWrapper = styled.div`
 `;
 
 export const Tag = styled.span`
-  background: #E2E2E2;
+  background: #e2e2e2;
   color: #212121;
   border-radius: 0.5rem;
   padding: 0.5rem;
   font-size: 0.8rem;
+  font-weight: bold;
   @media (max-width: 560px) {
     font-size: 0.6rem;
   }
+`;
+
+export const Container = styled.div`
+  position: relative;
+  height: 30vh;
+  width: 100%;
 `;
