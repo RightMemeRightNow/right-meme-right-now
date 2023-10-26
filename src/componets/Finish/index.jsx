@@ -6,7 +6,7 @@ import { useRouter } from 'next/router';
 import { Meta, Questions } from '@/constants';
 
 const Finish = ({ answers, setAnswers, setStep, fetchedResult, fetchZzal }) => {
-  const [imageUrl] = useState();
+  const [imageUrl, setImageUrl] = useState();
   const router = useRouter();
 
   useEffect(() => {
@@ -27,11 +27,12 @@ const Finish = ({ answers, setAnswers, setStep, fetchedResult, fetchZzal }) => {
 
   const onClickRetry = () => {
     setStep(0);
-    setAnswers([]);
+    setAnswers('');
   };
 
-  const onClickFindSimilar = () => {
-    alert('준비중입니다.');
+  const onClickFindSimilar = async () => {
+    const randomIndex = Math.floor(Math.random() * fetchedResult.imageNames.length);
+    setImageUrl(`/images/zzal/${fetchedResult.imageNames[randomIndex]}.png`);
   };
 
   return (
@@ -44,7 +45,16 @@ const Finish = ({ answers, setAnswers, setStep, fetchedResult, fetchZzal }) => {
             height={44}
             alt={'지금 내게 필요한 짤은?'}
           />
-          <Image src={`/images/zzal/${fetchedResult.imageNames[0]}.png`} layout="responsive" width={400} height={300} alt={'결과이미지'} />
+          <S.Container>
+            <Image
+              src={imageUrl || `/images/zzal/${fetchedResult?.imageNames[0]}.png`}
+              priority
+              fill
+              placeholder="blur"
+              blurDataURL="/images/loading.gif"
+              alt={'결과이미지'}
+            />
+          </S.Container>
           <S.TagWrapper>
             {answers?.split('').map((answer, i) => (
               <S.Tag key={i}>{`#${Questions[i]?.tag[Number(answer)]}`}</S.Tag>
@@ -53,9 +63,14 @@ const Finish = ({ answers, setAnswers, setStep, fetchedResult, fetchZzal }) => {
         </S.Wrapper>
         <S.Wrapper>
           <S.RowWrapper>
-            <a href={imageUrl} download style={{ width: "40%" }}>
+            <a href={imageUrl} download style={{ width: '40%' }}>
               <Button padding="0" height="40px" theme="secondary" width="100%">
-                <Image src={'/images/download_icon.png'} width={30} height={30} alt={'다운로드 버튼'} />
+                <Image
+                  src={'/images/download_icon.png'}
+                  width={30}
+                  height={30}
+                  alt={'다운로드 버튼'}
+                />
               </Button>
             </a>
             <Button
@@ -82,7 +97,7 @@ const Finish = ({ answers, setAnswers, setStep, fetchedResult, fetchZzal }) => {
         </S.Wrapper>
       </S.FlexWrapper>
     )
-  )
+  );
 };
 
 export default Finish;
