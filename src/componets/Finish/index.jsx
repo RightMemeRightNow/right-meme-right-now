@@ -15,6 +15,10 @@ const Finish = ({ answers, setAnswers, setStep, fetchedResult, fetchZzal }) => {
     fetchZzal();
   }, []);
 
+  useEffect(() => {
+    setImageUrl(`/images/zzal/${fetchedResult?.imageNames[0]}.png`);
+  }, [fetchedResult]);
+
   const shareClickHandler = () => {
     if (typeof window === 'undefined') return;
     const currentUrl = Meta.url + router.asPath;
