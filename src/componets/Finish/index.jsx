@@ -13,9 +13,7 @@ const Finish = ({ answers, setAnswers, setStep, fetchedResult, fetchZzal }) => {
 
   useEffect(() => {
     fetchZzal();
-
-    setImageUrl(`/images/zzal/${fetchedResult?.imageNames[0]}.png`);
-  }, [fetchedResult]);
+  }, []);
 
   const shareClickHandler = () => {
     if (typeof window === 'undefined') return;
