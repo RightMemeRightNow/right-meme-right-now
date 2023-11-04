@@ -8,7 +8,7 @@ import { ToastContainer } from 'react-toastify';
 import useToast from '@/hooks/useToast';
 
 const Finish = ({ answers, setAnswers, setStep, fetchedResult, fetchZzal }) => {
-  const [imageUrl, setImageUrl] = useState();
+  const [imageUrl, setImageUrl] = useState('');
   const router = useRouter();
 
   useEffect(() => {
@@ -53,7 +53,7 @@ const Finish = ({ answers, setAnswers, setStep, fetchedResult, fetchZzal }) => {
           />
           <S.Container>
             <Image
-              src={imageUrl || `/images/zzal/${fetchedResult?.imageNames[0]}.png`}
+              src={imageUrl}
               priority
               fill
               placeholder="blur"
