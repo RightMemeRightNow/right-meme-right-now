@@ -4,6 +4,8 @@ import Button from '@/componets/Button';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { Meta, Questions } from '@/constants';
+import { ToastContainer } from 'react-toastify';
+import useToast from '@/hooks/useToast';
 
 const Finish = ({ answers, setAnswers, setStep, fetchedResult, fetchZzal }) => {
   const [imageUrl, setImageUrl] = useState();
@@ -18,11 +20,11 @@ const Finish = ({ answers, setAnswers, setStep, fetchedResult, fetchZzal }) => {
     const currentUrl = Meta.url + router.asPath;
     window.navigator.clipboard
       .writeText(currentUrl)
-      .then(() => alert('클립 보드에 주소가 복사되었습니다'));
+      .then(() => useToast('클립 보드에 주소가 복사되었습니다', 'success'));
   };
 
   const onClickNotGood = () => {
-    alert('준비중입니다.');
+    useToast('준비중입니다.');
   };
 
   const onClickRetry = () => {
@@ -95,6 +97,7 @@ const Finish = ({ answers, setAnswers, setStep, fetchedResult, fetchZzal }) => {
             <button onClick={onClickNotGood}>별로예요 - 직접 올리기</button>
           </S.RowWrapper>
         </S.Wrapper>
+        <ToastContainer />
       </S.FlexWrapper>
     )
   );
