@@ -15,7 +15,7 @@ const Finish = ({ answers, setAnswers, setStep, fetchedResult, fetchZzal }) => {
     fetchZzal();
 
     setImageUrl(`/images/zzal/${fetchedResult?.imageNames[0]}.png`);
-  }, []);
+  }, [fetchedResult]);
 
   const shareClickHandler = () => {
     if (typeof window === 'undefined') return;
