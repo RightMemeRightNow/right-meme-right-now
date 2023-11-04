@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import * as S from './MemeStep.style';
 import Button from '@/componets/Button';
+import { ToastContainer } from 'react-toastify';
+import useToast from '@/hooks/useToast';
 
 const MemeStep = ({ step, answers, question, options, increaseStep, prevStep, getAnswers }) => {
   const [selectedButton, setSelectedButton] = useState(null);
@@ -14,7 +16,7 @@ const MemeStep = ({ step, answers, question, options, increaseStep, prevStep, ge
 
   const handleNext = () => {
     if (selectedButton === null) {
-      alert('답변을 골라주세요');
+      useToast('답변을 골라주세요', 'warning');
     } else {
       increaseStep();
       setSelectedButton(null);
@@ -52,6 +54,7 @@ const MemeStep = ({ step, answers, question, options, increaseStep, prevStep, ge
           <Button onClick={() => handleNext()}>다음</Button>
         </S.StyledLayout>
       </S.Wrapper>
+      <ToastContainer />
     </>
   );
 };
