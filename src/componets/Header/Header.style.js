@@ -2,6 +2,9 @@ import styled from 'styled-components';
 
 export const ProgressBar = styled.div`
     width: 100%;
+    @media (max-width: 560px) {
+        width: 90%;
+      }
     height: 1rem;
     background-color: #e2e2e2;
     border-radius: 10px;

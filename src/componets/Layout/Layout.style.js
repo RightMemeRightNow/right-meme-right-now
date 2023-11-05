@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  height: 100vh;
   display: flex;
-  flex-flow: row nowrap;
+  align-items: center;
   justify-content: center;
 `;
 
@@ -13,7 +12,7 @@ export const StyledLayout = styled.div`
   max-width: 600px;
   display: flex;
   flex-flow: column nowrap;
-  padding: 4rem;
+  padding: 3rem 4rem;
   @media (max-width: 560px) {
     padding: 0;
   }
