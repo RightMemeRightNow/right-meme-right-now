@@ -1,7 +1,7 @@
 import * as S from './Finish.style';
 import Image from 'next/image';
 import Button from '@/componets/Button';
-import { useState, useEffect, memo } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { Meta, Questions } from '@/constants';
 import { ToastContainer } from 'react-toastify';
@@ -84,15 +84,15 @@ const Finish = ({ answers, setAnswers, setStep, fetchedResult, fetchZzal, imageI
               />
             </Button>
           </a>
-          <Button
-            padding="0"
-            height="40px"
-            theme="secondary"
-            width="60%"
-            onClick={onClickFindSimilar}
-          >
-            비슷한 짤 찾기
-          </Button>
+            <Button
+              padding="0"
+              height="40px"
+              theme="secondary"
+              width="60%"
+              onClick={onClickFindSimilar}
+            >
+              비슷한 짤 찾기
+            </Button>
         </S.RowWrapper>
         <S.RowWrapper>
           <Button padding="0" height="40px" onClick={shareClickHandler}>

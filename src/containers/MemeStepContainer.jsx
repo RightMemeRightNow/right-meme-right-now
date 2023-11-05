@@ -1,7 +1,7 @@
 import Header from '@/componets/Header';
 import Layout from '@/componets/Layout';
 import { Step, Questions, Meta } from '@/constants';
-import { useEffect, useState, useCallback } from 'react';
+import { useEffect, useState } from 'react';
 import Main from '@/componets/Main';
 import MemeStep from '@/componets/MemeStep';
 import Portal from '@/componets/Portal';
