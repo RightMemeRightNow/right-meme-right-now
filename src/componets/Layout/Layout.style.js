@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 `;
 
 export const StyledLayout = styled.div`
-  height: 100%;
   width: 100%;
   max-width: 600px;
   display: flex;
