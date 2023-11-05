@@ -10,8 +10,8 @@ import Finish from '@/componets/Finish';
 import { HttpClient } from '@/httpClient';
 import { useZzalFetch } from '@/hooks/useZzalFetch';
 import { ZzalService } from '@/services/ZzalService';
-const httpClient = new HttpClient(Meta.url);
-// const httpClient = new HttpClient(`http://localhost:3000`);
+// const httpClient = new HttpClient(Meta.url);
+const httpClient = new HttpClient(`http://localhost:3000`);
 const zzalService = new ZzalService(httpClient);
 const MemeContainer = () => {
   const [step, setStep] = useState(Step.START);

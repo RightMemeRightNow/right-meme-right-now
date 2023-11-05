@@ -33,6 +33,7 @@ export const TagWrapper = styled.div`
   justify-content: center;
   gap: 0.5rem;
   width: 100%;
+  margin-bottom: 4rem;
 `;
 
 export const Tag = styled.span`
@@ -51,4 +52,5 @@ export const Container = styled.div`
   position: relative;
   height: 30vh;
   width: 100%;
+  margin-top: 1rem;
 `;

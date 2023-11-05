@@ -17,5 +17,5 @@ export const Wrapper = styled.div`
 `;
 
 export const AdmirationImage = styled(Image)`
-
+  margin: 4.2rem 0;
 `;
