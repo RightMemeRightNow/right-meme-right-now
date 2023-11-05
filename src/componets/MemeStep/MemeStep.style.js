@@ -2,26 +2,44 @@ import styled from 'styled-components';
 
 export const QuestionTitle = styled.div`
  font-size: 1.5rem;
- padding-bottom: 2rem;
 `
 export const Wrapper = styled.div`
  width: 100%;
- padding: ${({ $isOptionsOverTwo }) => $isOptionsOverTwo ? '3rem 0' : '10rem 0'} 0;
+ padding: ${({ $isOptionsTwo }) => $isOptionsTwo ? '2rem 0' : '1rem 0'} 0;
  
- ${({ $isLastQuestion }) => $isLastQuestion && `
+ ${({ $optionsLength }) => $optionsLength === 4 && `
+ margin: 2rem;
  padding: 0rem;
  display: grid;
  grid-template-columns: repeat(2, 1fr);
+ gap: 1rem;
+`}
+
+${({ $optionsLength }) => $optionsLength === 9 && `
+ padding: 0rem;
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
  gap: 0.5rem;
+
+ @media (min-width: 560px) {
+    grid-template-columns: repeat(2, 1fr);
+ }
 `}
 `;
 
 export const StyledLayout = styled.div`
  display: flex;
- margin-top: 4rem;
+ margin-top: 1rem;
 
- ${({ $isLastQuestion }) => $isLastQuestion && `
+ ${({ $optionsLength }) => $optionsLength === 4 && `
  grid-column: span 2;
- margin-top: 0rem;
+ `}
+
+ ${({ $optionsLength }) => $optionsLength === 9 && `
+ grid-column: span 3;
+
+ @media (min-width: 560px) {
+    grid-column: span 2;
+ }
  `}
 `

@@ -12,7 +12,7 @@ export const StyledLayout = styled.div`
   max-width: 600px;
   display: flex;
   flex-flow: column nowrap;
-  padding: 3rem 4rem;
+  padding: 2rem 4rem;
   @media (max-width: 560px) {
     padding: 0;
   }
@@ -30,7 +30,7 @@ export const Header = styled.header`
 `;
 
 export const Main = styled.main`
-  padding: 2rem;
+  padding: 1rem;
   height: 100%;
   width: 100%;
   flex: 1 1 auto;

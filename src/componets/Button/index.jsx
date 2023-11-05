@@ -7,7 +7,6 @@ const Button = ({
   padding = '1rem',
   theme = 'primary',
   marginBottom = '',
-  gridColumn = '',
   marginRight = '',
   onClick,
 }) => {
@@ -15,7 +14,6 @@ const Button = ({
     <S.StyledButton
       $height={height}
       $marginBottom={marginBottom}
-      $gridColumn={gridColumn}
       $marginRight={marginRight}
       $width={width}
       $padding={padding}
