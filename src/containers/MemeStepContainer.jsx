@@ -1,7 +1,7 @@
 import Header from '@/componets/Header';
 import Layout from '@/componets/Layout';
 import { Step, Questions, Meta } from '@/constants';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Main from '@/componets/Main';
 import MemeStep from '@/componets/MemeStep';
 import Portal from '@/componets/Portal';
@@ -10,6 +10,7 @@ import Finish from '@/componets/Finish';
 import { HttpClient } from '@/httpClient';
 import { useZzalFetch } from '@/hooks/useZzalFetch';
 import { ZzalService } from '@/services/ZzalService';
+import { useSearchParams } from 'next/navigation';
 const httpClient = new HttpClient(Meta.url);
 // const httpClient = new HttpClient(`http://localhost:3000`);
 const zzalService = new ZzalService(httpClient);
@@ -18,6 +19,17 @@ const MemeContainer = () => {
   const [question, setQuestion] = useState();
   const [answers, setAnswers] = useState('');
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const searchParams = useSearchParams();
+
+  const tags = searchParams.get('tags');
+  const imageId = searchParams.get('imageId')
+  
+  const checkParams = () => tags && imageId && setStep(7);
+
+  useEffect(() => {
+    checkParams();
+  }, [tags, imageId])
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -78,6 +90,8 @@ const MemeContainer = () => {
             setStep={setStep}
             fetchZzal={fetchZzal}
             fetchedResult={result}
+            imageId={imageId}
+            tags={tags}
           />
         </Layout>
       )}
