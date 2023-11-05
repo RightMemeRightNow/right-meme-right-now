@@ -21,7 +21,7 @@ ${({ $optionsLength }) => $optionsLength === 9 && `
  grid-template-columns: repeat(3, 1fr);
  gap: 0.5rem;
 
- @media (min-width: 560px) {
+ @media (max-width: 560px) {
     grid-template-columns: repeat(2, 1fr);
  }
 `}
@@ -38,7 +38,7 @@ export const StyledLayout = styled.div`
  ${({ $optionsLength }) => $optionsLength === 9 && `
  grid-column: span 3;
 
- @media (min-width: 560px) {
+ @media (max-width: 560px) {
     grid-column: span 2;
  }
  `}
