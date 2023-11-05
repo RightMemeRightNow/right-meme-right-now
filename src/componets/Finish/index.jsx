@@ -42,6 +42,8 @@ const Finish = ({ answers, setAnswers, setStep, fetchedResult, fetchZzal, imageI
   };
 
   const onClickFindSimilar = () => {
+    if (imageId) return useToast('다시 해보기를 해주세요!', 'warning');
+
     const randomIndex = Math.floor(Math.random() * fetchedResult.imageNames.length);
     setImageNum(fetchedResult.imageNames[randomIndex]);
     setImageUrl(`/images/zzal/${fetchedResult.imageNames[randomIndex]}.png`);
