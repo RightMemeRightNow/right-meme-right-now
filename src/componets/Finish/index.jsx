@@ -37,6 +37,8 @@ const Finish = ({ answers, setAnswers, setStep, fetchedResult, fetchZzal, imageI
   const onClickRetry = () => {
     setStep(0);
     setAnswers('');
+    const { pathname } = router;
+    router.push({ pathname, query: {} });
   };
 
   const onClickFindSimilar = () => {
