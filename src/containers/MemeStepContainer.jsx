@@ -11,7 +11,7 @@ import { HttpClient } from '@/httpClient';
 import { useZzalFetch } from '@/hooks/useZzalFetch';
 import { ZzalService } from '@/services/ZzalService';
 import { useSearchParams } from 'next/navigation';
-const httpClient = new HttpClient(Meta.url);
+const httpClient = new HttpClient(Meta.apiUrl);
 // const httpClient = new HttpClient(`http://localhost:3000`);
 const zzalService = new ZzalService(httpClient);
 const MemeContainer = () => {
@@ -23,13 +23,13 @@ const MemeContainer = () => {
   const searchParams = useSearchParams();
 
   const tags = searchParams.get('tags');
-  const imageId = searchParams.get('imageId')
-  
+  const imageId = searchParams.get('imageId');
+
   const checkParams = () => tags && imageId && setStep(7);
 
   useEffect(() => {
     checkParams();
-  }, [tags, imageId])
+  }, [tags, imageId]);
 
   const openModal = () => {
     setIsModalOpen(true);
