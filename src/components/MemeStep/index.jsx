@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import * as S from './MemeStep.style';
-import Button from '@/componets/Button';
+import Button from '@/components/Button';
 import { ToastContainer } from 'react-toastify';
 import useToast from '@/hooks/useToast';
 import Image from 'next/image';
