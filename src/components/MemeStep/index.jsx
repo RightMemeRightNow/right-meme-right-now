@@ -3,7 +3,6 @@ import * as S from './MemeStep.style';
 import Button from '@/components/Button';
 import { ToastContainer } from 'react-toastify';
 import useToast from '@/hooks/useToast';
-import Image from 'next/image';
 
 const MemeStep = ({ step, answers, question, options, increaseStep, prevStep, getAnswers }) => {
   const [selectedButton, setSelectedButton] = useState(null);
@@ -43,8 +42,8 @@ const MemeStep = ({ step, answers, question, options, increaseStep, prevStep, ge
             key={index}
             theme={selectedButton === index ? 'primary' : ''}
           >
-            <Image
-              src={`https://${process.env.NEXT_PUBLIC_CDN}/images/options/${step + '' + index}.jpeg`}
+            <img
+              src={`https://${process.env.NEXT_PUBLIC_CDN}/images/options/${step + '' + index}.webp`}
               width={step === 5 ? 110 : 130}
               height={step === 5 ? 80 : 100}
               alt={option}
