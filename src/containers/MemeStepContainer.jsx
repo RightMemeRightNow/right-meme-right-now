@@ -1,6 +1,6 @@
 import Header from '@/components/Header';
 import Layout from '@/components/Layout';
-import { Step, Questions, Meta } from '@/constants';
+import { Step, Questions } from '@/constants';
 import { useEffect, useState } from 'react';
 import Main from '@/components/Main';
 import MemeStep from '@/components/MemeStep';
@@ -11,8 +11,7 @@ import { HttpClient } from '@/httpClient';
 import { useZzalFetch } from '@/hooks/useZzalFetch';
 import { ZzalService } from '@/services/ZzalService';
 import { useSearchParams } from 'next/navigation';
-const httpClient = new HttpClient(Meta.apiUrl);
-// const httpClient = new HttpClient(`http://localhost:3000`);
+const httpClient = new HttpClient(process.env.NEXT_PUBLIC_API_URL);
 const zzalService = new ZzalService(httpClient);
 const MemeContainer = () => {
   const [step, setStep] = useState(Step.START);

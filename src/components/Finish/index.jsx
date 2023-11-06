@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Button from '@/components/Button';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
-import { Meta, Questions } from '@/constants';
+import { Questions } from '@/constants';
 import { ToastContainer } from 'react-toastify';
 import useToast from '@/hooks/useToast';
 
@@ -24,7 +24,7 @@ const Finish = ({ answers, setAnswers, setStep, fetchedResult, fetchZzal, imageI
   const shareClickHandler = () => {
     if (typeof window === 'undefined') return;
     const currentUrl =
-      Meta.url + (imageId ? router.asPath : `?tags=${answers}&imageId=${imageNum}`);
+      process.env.NEXT_PUBLIC_URL + (imageId ? router.asPath : `?tags=${answers}&imageId=${imageNum}`);
     window.navigator.clipboard
       .writeText(currentUrl)
       .then(() => useToast('클립 보드에 주소가 복사되었습니다', 'success'));

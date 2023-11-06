@@ -2,12 +2,11 @@ import Image from "next/image";
 import Button from "../Button";
 import * as S from './Error.style';
 import { useRouter } from "next/router";
-import { Meta } from "@/constants";
 
 const Error = ({ message }) => {
   const router = useRouter();
   const goBackHome = () => {
-    router.push(`${Meta.url}`);
+    router.push(`/`);
   }
   return (
     <S.Wrapper>
