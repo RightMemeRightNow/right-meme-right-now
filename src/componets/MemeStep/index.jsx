@@ -3,11 +3,11 @@ import * as S from './MemeStep.style';
 import Button from '@/componets/Button';
 import { ToastContainer } from 'react-toastify';
 import useToast from '@/hooks/useToast';
+import Image from 'next/image';
 
 const MemeStep = ({ step, answers, question, options, increaseStep, prevStep, getAnswers }) => {
   const [selectedButton, setSelectedButton] = useState(null);
-  const isOptionsOverTwo = options.length > 2;
-  const isLastQuestion = options.length === 9;
+  const isOptionsTwo = options.length === 2;
   const userAnswer = answers.length > 0 ? answers[step - 1] : null;
 
   const handleAnswer = answer => {
@@ -35,19 +35,25 @@ const MemeStep = ({ step, answers, question, options, increaseStep, prevStep, ge
   return (
     <>
       <S.QuestionTitle>{question}</S.QuestionTitle>
-      <S.Wrapper $isOptionsOverTwo={isOptionsOverTwo} $isLastQuestion={isLastQuestion}>
+      <S.Wrapper $isOptionsTwo={isOptionsTwo} $optionsLength={options.length}>
         {options.map((option, index) => (
           <Button
             onClick={() => handleAnswer(index)}
-            marginBottom={isOptionsOverTwo ? '1rem' : '2rem'}
-            gridColumn={options.length === 9 && index === 8 ? `span 2` : `span 1`}
+            marginBottom={isOptionsTwo ? '2rem' : '0.5rem'}
             key={index}
             theme={selectedButton === index ? 'primary' : ''}
           >
+            <Image
+              src={`/images/options/${step + '' + index}.jpeg`}
+              width={step === 5 ? 110 : 130}
+              height={step === 5 ? 80 : 100}
+              alt={option}
+            />
+            <br />
             {option}
           </Button>
         ))}
-        <S.StyledLayout $isLastQuestion={isLastQuestion}>
+        <S.StyledLayout $optionsLength={options.length}>
           <Button onClick={() => prevStep()} marginRight="1rem">
             이전
           </Button>
