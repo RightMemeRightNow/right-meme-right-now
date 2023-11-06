@@ -17,7 +17,7 @@ const Finish = ({ answers, setAnswers, setStep, fetchedResult, fetchZzal, imageI
   }, []);
 
   useEffect(() => {
-    setImageUrl(`/images/zzal/${imageId ?? fetchedResult?.imageNames[0]}.png`);
+    setImageUrl(`https://${process.env.NEXT_PUBLIC_CDN}/images/zzal/${imageId ?? fetchedResult?.imageNames[0]}.png`);
     setImageNum(fetchedResult?.imageNames[0]);
   }, [fetchedResult]);
 
@@ -46,14 +46,14 @@ const Finish = ({ answers, setAnswers, setStep, fetchedResult, fetchZzal, imageI
 
     const randomIndex = Math.floor(Math.random() * fetchedResult.imageNames.length);
     setImageNum(fetchedResult.imageNames[randomIndex]);
-    setImageUrl(`/images/zzal/${fetchedResult.imageNames[randomIndex]}.png`);
+    setImageUrl(`https://${process.env.NEXT_PUBLIC_CDN}/images/zzal/${fetchedResult.imageNames[randomIndex]}.png`);
   };
 
   return (
     <S.FlexWrapper>
       <S.Wrapper>
         <Image
-          src={'/images/question.png'}
+          src={`https://${process.env.NEXT_PUBLIC_CDN}/images/question.png`}
           width={300}
           height={44}
           alt={'지금 내게 필요한 짤은?'}
@@ -64,7 +64,7 @@ const Finish = ({ answers, setAnswers, setStep, fetchedResult, fetchZzal, imageI
             priority
             fill
             placeholder="blur"
-            blurDataURL="/images/loading.gif"
+            blurDataURL={`https://${process.env.NEXT_PUBLIC_CDN}/images/loading.gif`}
             alt={'결과이미지'}
           />
         </S.Container>
@@ -79,7 +79,7 @@ const Finish = ({ answers, setAnswers, setStep, fetchedResult, fetchZzal, imageI
           <a href={imageUrl} download style={{ width: '40%' }}>
             <Button padding="0" height="40px" theme="secondary" width="100%">
               <Image
-                src={'/images/download_icon.png'}
+                src={`https://${process.env.NEXT_PUBLIC_CDN}/images/download_icon.png`}
                 width={30}
                 height={30}
                 alt={'다운로드 버튼'}

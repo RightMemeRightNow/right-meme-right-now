@@ -4,6 +4,14 @@ const nextConfig = {
   compiler: {
     styledComponents: true
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: `${process.env.NEXT_PUBLIC_CDN}`,
+      },
+    ],
+  }
 };
 
 module.exports = nextConfig;
