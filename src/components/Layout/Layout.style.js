@@ -16,7 +16,7 @@ export const StyledLayout = styled.div`
   @media (max-width: 560px) {
     padding: 0;
   }
-  background: url("https://${process.env.NEXT_PUBLIC_CDN}/images/phone-border.png") no-repeat center center / 600px 100%;
+  background: url("https://${process.env.NEXT_PUBLIC_CDN}/images/phone-border.webp") no-repeat center center / 600px 100%;
   @media (max-width: 560px) {
     background: none;
   }

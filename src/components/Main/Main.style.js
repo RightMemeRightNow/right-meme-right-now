@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Image from "next/image";
 
 export const FlexWrapper = styled.div`
   display: flex;
@@ -16,6 +15,6 @@ export const Wrapper = styled.div`
   justify-content: center;
 `;
 
-export const AdmirationImage = styled(Image)`
+export const AdmirationImage = styled.img`
   margin: 4.2rem 0;
 `;

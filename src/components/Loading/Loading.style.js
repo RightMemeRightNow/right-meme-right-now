@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Image from "next/image";
 
 export const Wrapper = styled.div`
   width: 24rem;
@@ -11,7 +10,7 @@ export const Wrapper = styled.div`
   transform: translate(-50%, -50%);
 `;
 
-export const StyledImage = styled(Image)`
+export const StyledImage = styled.img`
   width: 100%;
   height: 100%;
 `;

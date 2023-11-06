@@ -40,7 +40,7 @@ const DefaultHead = ({ title, description, url, ogi }) => {
       <meta name="twitter:image"
         content={ogi}
       />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href={`https://${process.env.NEXT_PUBLIC_CDN}/favicon.webp`} />
     </>
   );
 }
