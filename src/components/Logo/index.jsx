@@ -7,7 +7,7 @@ const Logo = ({ width = 120, height = 50 }) => {
     <S.StyledLink href={'/'}>
       <A11yHidden as="h1">이때이짤</A11yHidden>
       <Image
-        src={'/images/logo.png'}
+        src={`https://${process.env.NEXT_PUBLIC_CDN}/images/logo.png`}
         width={width}
         height={height}
         style={{ margin: '0.5rem' }}

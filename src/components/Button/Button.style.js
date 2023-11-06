@@ -13,7 +13,7 @@ export const StyledButton = styled.button`
   }
   ${({ $theme }) => css`
     background: ${$theme === 'primary' ? '#212121' : $theme === 'secondary' ? '#E2E2E2' :
-      'url("/images/button-border.png") no-repeat center center / 100% 100%'
+      `url("https://${process.env.NEXT_PUBLIC_CDN}/images/button-border.png") no-repeat center center / 100% 100%`
     };
     color: ${$theme === 'primary' ? '#fff' : '#212121'};
     font-weight: ${$theme === 'primary' ? 500 : 400};

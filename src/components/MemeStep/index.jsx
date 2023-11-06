@@ -44,7 +44,7 @@ const MemeStep = ({ step, answers, question, options, increaseStep, prevStep, ge
             theme={selectedButton === index ? 'primary' : ''}
           >
             <Image
-              src={`/images/options/${step + '' + index}.jpeg`}
+              src={`https://${process.env.NEXT_PUBLIC_CDN}/images/options/${step + '' + index}.jpeg`}
               width={step === 5 ? 110 : 130}
               height={step === 5 ? 80 : 100}
               alt={option}

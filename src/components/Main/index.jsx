@@ -10,14 +10,14 @@ const Main = ({ increaseStep }) => {
       <S.FlexWrapper>
         <S.Wrapper>
           <Image
-            src={'/images/question.png'}
+            src={`https://${process.env.NEXT_PUBLIC_CDN}/images/question.png`}
             width={300}
             height={44}
             alt={'지금 내게 필요한 짤은?'}
           />
           <Logo width={400} height={150} />
           <S.AdmirationImage
-            src={'/images/admiration.png'}
+            src={`https://${process.env.NEXT_PUBLIC_CDN}/images/admiration.png`}
             width={400}
             height={200}
             alt={'지금 내게 필요한 짤은?'}
