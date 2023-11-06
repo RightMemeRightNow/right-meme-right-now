@@ -1,8 +1,8 @@
-import Layout from '@/componets/Layout';
+import Layout from '@/components/Layout';
 import Image from 'next/image';
-import Logo from '@/componets/Logo';
+import Logo from '@/components/Logo';
 import * as S from './Main.style';
-import Button from '@/componets/Button';
+import Button from '@/components/Button';
 
 const Main = ({ increaseStep }) => {
   return (

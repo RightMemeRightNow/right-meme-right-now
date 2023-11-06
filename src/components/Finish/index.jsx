@@ -1,6 +1,6 @@
 import * as S from './Finish.style';
 import Image from 'next/image';
-import Button from '@/componets/Button';
+import Button from '@/components/Button';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { Meta, Questions } from '@/constants';
