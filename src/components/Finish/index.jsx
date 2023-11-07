@@ -60,6 +60,8 @@ const Finish = ({ answers, setAnswers, setStep, fetchedResult, fetchZzal, imageI
         <S.Container>
           <img
             src={imageUrl}
+            width={`auto`}
+            height={224}
             /*priority
             fill
             placeholder="blur"
