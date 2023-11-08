@@ -3,6 +3,10 @@ name: Check NextJs build
 on:
   pull_request:
     types: [opened, reopened]
+    branches:
+      - main
+    paths:
+      - "frontend/**"
 
   workflow_dispatch:
 
