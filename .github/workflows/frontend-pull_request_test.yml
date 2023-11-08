@@ -7,8 +7,7 @@ on:
       - main
     paths:
       - "frontend/**"
-
-  workflow_dispatch:
+      - ".github/workflows/frontend-**.yml"
 
 permissions:
   contents: read
