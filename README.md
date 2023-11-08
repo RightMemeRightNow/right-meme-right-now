@@ -2,7 +2,7 @@
 
 ---
 
-<p align="center"><image src="./public/images/doc/main.png"/></p>
+<p align="center"><image src="./.github/images/doc/main.png"/></p>
 <p align="center"><a href="https://right-meme-right-now.site">⬆︎ 인생 짤 찾으러 가기 ⬆︎</a></p>
 
 ## 프로젝트 요약
@@ -13,15 +13,15 @@
 
 ## 프로젝트 소개
 
-<img src="./public/images/doc/main-page.png" width="500px" />
+<img src="./.github/images/doc/main-page.png" width="500px" />
 
 랜딩 페이지입니다. 지금 당신의 기분, 상황에 맞는 짤을 찾아보세요!
 
-<img src="./public/images/doc/step-page.png" width="500px" />
+<img src="./.github/images/doc/step-page.png" width="500px" />
 
 당신이 지금 어떤지 알려주세요! 꼭 맞는 짤을 찾기 위해 솔직하게 대답해봐요!
 
-<img src="./public/images/doc/final-page.jpeg" width="500px" />
+<img src="./.github/images/doc/final-page.jpeg" width="500px" />
 
 이 짤이 마음에 드셨으면 좋겠어요. 다른 분들과 공유해볼까요?
 
@@ -52,35 +52,35 @@
     <tr height="150px">
         <td align="center" width="200px">
                 <a href="https://github.com/psymoney">
-                    <image src="./public/images/doc/koy.png" width="75" height="75" />
+                    <image src="./.github/images/doc/koy.png" width="75" height="75" />
                 </a>
                 <br />
                 <a href="https://github.com/psymoney">psymoney</a>
         </td>
         <td align="center" width="200px">
                 <a href="https://github.com/minsoo0112">
-                    <image src="./public/images/doc/leo.png" width="75" height="75" />
+                    <image src="./.github/images/doc/leo.png" width="75" height="75" />
                 </a>
                 <br />
                 <a href="https://github.com/minsoo0112">minsoo0112</a>
         </td>
         <td align="center" width="200px">
                 <a href="https://github.com/seonghun0828">
-                    <image src="./public/images/doc/jojo.png" width="75" height="75" />
+                    <image src="./.github/images/doc/jojo.png" width="75" height="75" />
                 </a>
                 <br />
                 <a href="https://github.com/seonghun0828">seonghun0828</a>
         </td>
         <td align="center" width="200px">
                 <a href="https://github.com/KJeeu">
-                    <image src="./public/images/doc/hodo.png" width="75" height="75" />
+                    <image src="./.github/images/doc/hodo.png" width="75" height="75" />
                 </a>
                 <br />
                 <a href="https://github.com/KJeeu">KJeeu</a>
         </td>
         <td align="center" width="200px">
                 <a href="https://github.com/hyunwlee-dev">
-                    <image src="./public/images/doc/dao.png" width="75" height="75" />
+                    <image src="./.github/images/doc/dao.png" width="75" height="75" />
                 </a>
                 <br />
                 <a href="https://github.com/hyunwlee-dev">hyunwlee-dev</a>
