@@ -1,13 +1,10 @@
-name: Check Backend
+name: Test Backend Pull Request
 
 on:
   pull_request:
     types: [opened, reopened]
     branches:
       - main
-    paths:
-      - "backend/**"
-      - ".github/workflows/backend-**.yml"
 
 permissions:
   contents: read
@@ -15,7 +12,25 @@ permissions:
   id-token: write
 
 jobs:
+  files-changed:
+    name: Determine if files changed
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: dorny/paths-filter@v2
+        id: changes
+        with:
+          filters: |
+            src:
+              - backend/**
+              - .github/workflows/backend-**.yml
+    outputs:
+      filesChanged: ${{ steps.changes.outputs.src }}
+
   test:
+    needs: [files-changed]
+    if: needs.files-changed.outputs.filesChanged == 'true'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
